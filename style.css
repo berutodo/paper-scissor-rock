@@ -85,11 +85,21 @@
 .step2 {
     display: none;
     flex-direction: row;
+    gap: 50px;
     justify-content: center;
+    align-items: center;
 }
 
 .main {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.again {
+    width: 200px;
+    height: 50px;
+    background-color: wheat;
+    border: none;
+    cursor: pointer;
 }

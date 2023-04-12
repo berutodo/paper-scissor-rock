@@ -64,12 +64,17 @@ function verificarGanhador() {
     if ((player === 'rock' && ia === 'scissor') ||
         (player === 'paper' && ia === 'rock') ||
         (player === 'scissor' && ia === 'paper')) {
+        document.getElementById("result").innerText = "You Win"
         return changeScore(3)
     } else if ((ia === 'rock' && player === 'scissor') ||
         (ia === 'paper' && player === 'rock') ||
         (ia === 'scissor' && player === 'paper')) {
+        document.getElementById("result").innerText = "You Lose"
+
         return changeScore(-3);
     } else {
+        document.getElementById("result").innerText = "Draw"
+
         return changeScore(1)
     }
 }
@@ -112,6 +117,7 @@ function resetGame() {
     ia = "";
     let divPlayer = document.getElementById("player")
     let divHouse = document.getElementById("house")
+    document.getElementById("result").innerText = ""
 
     document.getElementById("step1").style.display = "flex";
     document.getElementById("step2").style.display = "none";
