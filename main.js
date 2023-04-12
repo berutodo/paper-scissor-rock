@@ -3,35 +3,30 @@ let score = 0;
 let player;
 let ia;
 let scoreElement = document.getElementById("scoreNumber");
+let step1 = document.getElementById("step1")
 scoreElement.innerText = score
 
 function setChoice(x) {
+    document.getElementById("step1").style.display = "none";
     if (choice == 0) {
-        let scissor = document.getElementById("scissor")
-        let rock = document.getElementById("rock")
-        let paper = document.getElementById("paper")
         switch (x) {
             case "rock":
-                scissor.style.display = "none";
-                paper.style.display = "none";
                 playerChoice(x)
                 randomChoice()
                 break;
             case "paper":
-                scissor.style.display = "none";
-                rock.style.display = "none";
                 playerChoice(x)
                 randomChoice()
 
                 break;
             case "scissor":
-                rock.style.display = "none";
-                paper.style.display = "none";
                 playerChoice(x)
                 randomChoice()
                 break;
         }
         choice = 1
+        document.getElementById("step2").style.display = "flex";
+
     }
     verificarGanhador()
 }
@@ -80,11 +75,39 @@ function verificarGanhador() {
 }
 
 function playerChoice(x) {
+    let div = document.getElementById("player")
+    let a = document.createElement("img")
     player = x
+    switch (x) {
+        case "rock":
+            a.src = "./images/icon-rock.svg"
+            div.appendChild(a)
+            break;
+        case "paper":
+            a.src = "./images/icon-paper.svg"
+            div.appendChild(a)
+            break;
+        case "scissor":
+            a.src = "./images/icon-scissors.svg"
+            div.appendChild(a)
+    }
     console.log(player)
 }
 
 function changeScore(x) {
     score += x
     scoreElement.innerText = score
+}
+
+function resetGame() {
+    player = "";
+    ia = "";
+    document.getElementById("step1").style.display = "flex";
+    document.getElementById("step2").style.display = "none";
+    choice = 0
+    document.getElementById("player").innerHTML = "";
+    document.getElementById("house").innerHTML = "";
+
+
+
 }

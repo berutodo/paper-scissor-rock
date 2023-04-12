@@ -14,7 +14,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&display=swap" rel="stylesheet">
     <title>Frontend Mentor | Rock, Paper, Scissors</title>
     <script src="main.js" defer lang="javascript"></script>
-    Score Rules You Picked The House Picked You Win You Lose Play Again
     <!--
     <meta http-equiv="refresh" content="6">
 
@@ -23,36 +22,40 @@
 </head>
 
 <body>
-    <div class="scoreBoard">
-        <div>
-            <h1>Rock</h1>
-            <h1>Paper</h1>
-            <h1>Scissors</h1>
-        </div>
-        <div class="score">
-            <h3>score</h3>
-            <h1 id="scoreNumber">0</h1>
-        </div>
-    </div>
-    <div class="game">
-        <div id="step1">
-            <div class="images">
-                <div id="paper" class="paper" onclick="setChoice(`paper`)"><img src="./images/icon-paper.svg" alt="" srcset=""></div>
-                <div id="scissor" class="scissor" onclick="setChoice(`scissor`)"><img src="./images/icon-scissors.svg" alt="" srcset=""></div>
-                <div id="rock" class="rock" onclick="setChoice(`rock`)"><img src="./images/icon-rock.svg" alt="" srcset=""></div>
+    <div class="main">
+        <div class="scoreBoard">
+            <div>
+                <h1>Rock</h1>
+                <h1>Paper</h1>
+                <h1>Scissors</h1>
             </div>
-            <button>Play Again!</button>
+            <div class="score">
+                <h3>score</h3>
+                <h1 id="scoreNumber">0</h1>
+            </div>
+        </div>
+        <div class="game">
+            <div id="step1" class="step1">
+                <div class="images">
+                    <div id="paper" class="paper" onclick="setChoice(`paper`)"><img src="./images/icon-paper.svg" alt="" srcset=""></div>
+                    <div id="scissor" class="scissor" onclick="setChoice(`scissor`)"><img src="./images/icon-scissors.svg" alt="" srcset=""></div>
+                    <div id="rock" class="rock" onclick="setChoice(`rock`)"><img src="./images/icon-rock.svg" alt="" srcset=""></div>
+                </div>
+            </div>
+            <div id="step2" class="step2">
+                <div id="chosed">
+                    <h1>You picked</h1>
+                    <div id="player" class="player"></div>
+                </div>
+                <div id="step2house">
+                    <div id="house" class=""></div>
+                </div>
+            </div>
+
+            <button onclick="resetGame()">Play Again!</button>
             <div id="house" class=""></div>
         </div>
-        <div id="step2">
-            <div id="chosed">
-                <h1>You picked</h1>
-                <div id="paper" class="paper" onclick="setChoice(`paper`)"><img src="./images/icon-paper.svg" alt="" srcset=""></div>
-            </div>
-            <div id="step2house">
-                <div id="paper" class="paper" onclick="setChoice(`paper`)"><img src="./images/icon-paper.svg" alt="" srcset=""></div>
-            </div>
-        </div>
+
     </div>
 
 </body>
