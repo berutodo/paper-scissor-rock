@@ -68,7 +68,7 @@ function verificarGanhador() {
     } else if ((ia === 'rock' && player === 'scissor') ||
         (ia === 'paper' && player === 'rock') ||
         (ia === 'scissor' && player === 'paper')) {
-        return 'A IA venceu!';
+        return changeScore(-3);
     } else {
         return changeScore(1)
     }
@@ -82,32 +82,48 @@ function playerChoice(x) {
         case "rock":
             a.src = "./images/icon-rock.svg"
             div.appendChild(a)
+            div.classList.add(x)
             break;
         case "paper":
             a.src = "./images/icon-paper.svg"
             div.appendChild(a)
+            div.classList.add(x)
+
             break;
         case "scissor":
             a.src = "./images/icon-scissors.svg"
             div.appendChild(a)
+            div.classList.add(x)
+
     }
     console.log(player)
 }
 
 function changeScore(x) {
-    score += x
-    scoreElement.innerText = score
+    score += x;
+    if (score < 0) {
+        score = 0;
+    }
+    scoreElement.innerText = score;
 }
 
 function resetGame() {
     player = "";
     ia = "";
+    let divPlayer = document.getElementById("player")
+    let divHouse = document.getElementById("house")
+
     document.getElementById("step1").style.display = "flex";
     document.getElementById("step2").style.display = "none";
     choice = 0
-    document.getElementById("player").innerHTML = "";
-    document.getElementById("house").innerHTML = "";
-
+    divPlayer.innerHTML = "";
+    divHouse.innerHTML = "";
+    while (divPlayer.classList.length > 0) {
+        divPlayer.classList.remove(divPlayer.classList.item(0));
+    }
+    while (divHouse.classList.length > 0) {
+        divHouse.classList.remove(divHouse.classList.item(0));
+    }
 
 
 }

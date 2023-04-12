@@ -82,14 +82,10 @@
     margin-top: 100px;
 }
 
-#house {
-    border: 1px solid red;
-}
-
 .step2 {
     display: none;
-    flex-wrap: nowrap;
     flex-direction: row;
+    justify-content: center;
 }
 
 .main {
