@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Frontend Mentor | Rock, Paper, Scissors</title>
+    <script src="main.js" defer lang="javascript"></script>
+    Score Rules You Picked The House Picked You Win You Lose Play Again
+    <!--
+    <meta http-equiv="refresh" content="6">
+
+    -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="scoreBoard">
+        <div>
+            <h1>Rock</h1>
+            <h1>Paper</h1>
+            <h1>Scissors</h1>
+        </div>
+        <div class="score">
+            <h3>score</h3>
+            <h1 id="scoreNumber">0</h1>
+        </div>
+    </div>
+    <div class="game">
+        <div id="step1">
+            <div class="images">
+                <div id="paper" class="paper" onclick="setChoice(`paper`)"><img src="./images/icon-paper.svg" alt="" srcset=""></div>
+                <div id="scissor" class="scissor" onclick="setChoice(`scissor`)"><img src="./images/icon-scissors.svg" alt="" srcset=""></div>
+                <div id="rock" class="rock" onclick="setChoice(`rock`)"><img src="./images/icon-rock.svg" alt="" srcset=""></div>
+            </div>
+            <button>Play Again!</button>
+            <div id="house" class=""></div>
+        </div>
+        <div id="step2">
+            <div id="chosed">
+                <h1>You picked</h1>
+                <div id="paper" class="paper" onclick="setChoice(`paper`)"><img src="./images/icon-paper.svg" alt="" srcset=""></div>
+            </div>
+            <div id="step2house">
+                <div id="paper" class="paper" onclick="setChoice(`paper`)"><img src="./images/icon-paper.svg" alt="" srcset=""></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.rock {
+    height: 150px;
+    width: 150px;
+    display: flex;
+    background-color: whitesmoke;
+    border: 20px solid red;
+    border-radius: 50%;
+    justify-content: center;
+    cursor: pointer;
+    align-items: center;
+}
+
+.paper {
+    height: 150px;
+    width: 150px;
+    display: flex;
+    background-color: whitesmoke;
+    border: 20px solid blue;
+    border-radius: 50%;
+    justify-content: center;
+    cursor: pointer;
+    align-items: center;
+}
+
+.scissor {
+    height: 150px;
+    width: 150px;
+    display: flex;
+    background-color: whitesmoke;
+    border: 20px solid yellow;
+    border-radius: 50%;
+    justify-content: center;
+    cursor: pointer;
+    align-items: center;
+}
+
+.scoreBoard {
+    display: flex;
+    width: 75%;
+    padding: 20px;
+    align-items: center;
+    flex-direction: row;
+    font-family: 'Barlow', sans-serif;
+    justify-content: space-between;
+    border: 1px solid gray;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.scoreBoard .score {
+    border: 1px solid red;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column;
+    height: 100px;
+    width: 140px;
+}
+
+.images {
+    display: flex;
+    width: 400px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+    gap: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.game {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#house {
+    border: 1px solid red;
+}
+
+.step2 {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
