@@ -1,6 +1,8 @@
 * {
     padding: 0;
     margin: 0;
+    font-family: 'Barlow', sans-serif;
+    text-transform: uppercase;
 }
 
 .rock {
@@ -43,25 +45,38 @@
     display: flex;
     width: 75%;
     padding: 20px;
+    margin-top: 50px;
     align-items: center;
     flex-direction: row;
-    font-family: 'Barlow', sans-serif;
     justify-content: space-between;
-    border: 1px solid gray;
+    border: 2px solid hsl(217, 16%, 45%);
+    border-radius: 10px;
     font-weight: 700;
-    text-transform: uppercase;
+}
+
+.scoreBoard .names {
+    color: white;
 }
 
 .scoreBoard .score {
-    border: 1px solid red;
     border-radius: 10px;
+    background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
     flex-direction: column;
     height: 100px;
     width: 140px;
+}
+
+.scoreBoard .score h1 {
+    color: hsl(217, 16%, 45%);
+    font-size: 50px;
+}
+
+.scoreBoard .score h3 {
+    color: hsl(229, 64%, 46%);
 }
 
 .images {
@@ -78,6 +93,7 @@
 .game {
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
     margin-top: 100px;
 }
@@ -85,21 +101,37 @@
 .step2 {
     display: none;
     flex-direction: row;
+    justify-content: space-between;
     gap: 50px;
-    justify-content: center;
     align-items: center;
+    width: 75%;
+    color: white;
+}
+
+.step2 div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
 }
 
 .main {
     display: flex;
+    height: 100vh;
     flex-direction: column;
     align-items: center;
+    background: hsl(214, 47%, 23%);
+    background: radial-gradient(hsl(214, 47%, 23%) to hsl(237, 49%, 15%));
 }
 
 .again {
     width: 200px;
     height: 50px;
-    background-color: wheat;
+    background-color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 10px;
     border: none;
     cursor: pointer;
 }
