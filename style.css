@@ -121,8 +121,6 @@
     height: 100vh;
     flex-direction: column;
     align-items: center;
-    background: hsl(214, 47%, 23%);
-    background: radial-gradient(hsl(214, 47%, 23%) to hsl(237, 49%, 15%));
 }
 
 .again {
