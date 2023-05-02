@@ -3,6 +3,7 @@
     margin: 0;
     font-family: 'Barlow', sans-serif;
     text-transform: uppercase;
+    color: black;
 }
 
 .rock {
@@ -132,4 +133,50 @@
     border-radius: 10px;
     border: none;
     cursor: pointer;
+}
+
+@media (max-width: 375px) {
+    .paper {
+        height: 20vh;
+        width: 30%;
+        display: flex;
+        background-color: whitesmoke;
+        border: 20px solid blue;
+        border-radius: 50%;
+        justify-content: center;
+        cursor: pointer;
+        align-items: center;
+    }
+    .scissor {
+        height: 20vh;
+        width: 30%;
+        display: flex;
+        background-color: whitesmoke;
+        border: 20px solid yellow;
+        border-radius: 50%;
+        justify-content: center;
+        cursor: pointer;
+        align-items: center;
+    }
+    .rock {
+        height: 20vh;
+        width: 30%;
+        display: flex;
+        background-color: whitesmoke;
+        border: 20px solid red;
+        border-radius: 50%;
+        justify-content: center;
+        cursor: pointer;
+        align-items: center;
+    }
+    .images {
+        display: flex;
+        width: 375px;
+        justify-content: center;
+        align-items: center;
+        border: none !important;
+        gap: 20px;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 }
