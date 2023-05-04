@@ -209,13 +209,21 @@
 /* Modal Content/Box */
 
 .modal-content {
+    border-radius: 20px;
     background-color: #fefefe;
     margin: 15% auto;
     /* 15% from the top and centered */
-    padding: 20px;
+    padding: 30px;
     border: 1px solid #888;
-    width: 80%;
+    width: fit-content;
     /* Could be more or less, depending on screen size */
+}
+
+.modal-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
 }
 
 
