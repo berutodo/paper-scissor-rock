@@ -106,6 +106,8 @@
     gap: 50px;
     align-items: center;
     width: 75%;
+    font-size: small !important;
+    white-space: nowrap;
     color: white;
 }
 
@@ -130,12 +132,17 @@
     background-color: white;
     font-weight: bold;
     text-transform: uppercase;
+    border: 1px solid black;
     border-radius: 10px;
-    border: none;
     cursor: pointer;
 }
 
 @media (max-width: 375px) {
+    #chosed,
+    #step2house {
+        flex-direction: column-reverse;
+        font-size: xx-small;
+    }
     .resultDiv {
         order: 3;
     }
@@ -152,7 +159,7 @@
         width: 30%;
         display: flex;
         background-color: whitesmoke;
-        border: 20px solid blue;
+        border: 10px solid blue;
         border-radius: 50%;
         justify-content: center;
         cursor: pointer;
@@ -163,7 +170,7 @@
         width: 30%;
         display: flex;
         background-color: whitesmoke;
-        border: 20px solid yellow;
+        border: 10px solid yellow;
         border-radius: 50%;
         justify-content: center;
         cursor: pointer;
@@ -174,7 +181,7 @@
         width: 30%;
         display: flex;
         background-color: whitesmoke;
-        border: 20px solid red;
+        border: 10px solid red;
         border-radius: 50%;
         justify-content: center;
         cursor: pointer;
